@@ -1,4 +1,4 @@
-![cv](https://github.com/tcdtist/cv/cv.png)
+![cv](https://raw.githubusercontent.com/tcdtist/cv/main/public/images/cv.png)
 
 # Minimalist CV [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftcdtist%2Fcv)
 
