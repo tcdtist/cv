@@ -8,6 +8,8 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import { LogoDarkIcon, LogoLightIcon } from "@/images/logos";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -18,7 +20,7 @@ export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-2">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
@@ -87,7 +89,7 @@ export default function Page() {
             </div>
           </div>
 
-          <Avatar className="size-28">
+          <Avatar className="size-36">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
@@ -170,7 +172,7 @@ export default function Page() {
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {RESUME_DATA.projects.map((project) => {
+            {/* {RESUME_DATA.projects.map((project) => {
               return (
                 <ProjectCard
                   key={project.title}
@@ -180,7 +182,10 @@ export default function Page() {
                   link={"link" in project ? project.link.href : undefined}
                 />
               );
-            })}
+            })} */}
+            {RESUME_DATA.projects.length === 0 ? (
+              <CardContent className="mx-3 mt-2">Updating...</CardContent>
+            ) : null}
           </div>
         </Section>
       </section>
