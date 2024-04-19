@@ -127,7 +127,7 @@ export default function Page() {
                       </span>
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end ?? "Present"}
+                      {work.start} - {work.end || "Present"}
                     </div>
                   </div>
 
@@ -138,6 +138,11 @@ export default function Page() {
                 <CardContent className="mt-2 text-xs">
                   {work.description}
                 </CardContent>
+                {work.technologies ? (
+                  <CardContent className="mt-1 text-xs">
+                    <span>Technologies:</span> {work.technologies}
+                  </CardContent>
+                ) : null}
               </Card>
             );
           })}

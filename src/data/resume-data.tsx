@@ -8,7 +8,7 @@ export const RESUME_DATA = {
   about:
     "Full Stack Engineer focused on building products with extra attention to detail",
   summary:
-    "As a Full Stack Engineer, I have successfully delivered multiple products from 0 to 1. With over 4 years of industry experience, I have led teams effectively, ensuring an environment where everyone who can do the best job. Currently, I mainly work with JavaScript, TypeScript, React, Next.js, Node.js, and MongoDB.",
+    "As a Full Stack Engineer, I have successfully delivered multiple products from 0 to 1. With over 4 years of industry experience, I have led teams effectively, ensuring an environment where everyone who can do the best job. Currently, I mainly work with JavaScript, TypeScript, React, Next.js, Node.js, and MongoDB",
   avatarUrl: "https://avatars.githubusercontent.com/u/54889078?v=4",
   personalWebsiteUrl: "https://www.tcdtist.com/",
   contact: {
@@ -47,9 +47,11 @@ export const RESUME_DATA = {
       badges: ["Remote"],
       title: "Junior Web Developer → Lead Web Developer",
       start: "07/2021",
-      end: "Present",
+      end: "",
       description:
-        "Implemented new features, lead a team, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, Next.js, JavaScript, Node.js",
+        "Set goals and discuss, lead small teams to implement new projects and features. Ensure alignment with overall goals and strive to improve developers' code. Stay up to date with new technologies and motivate the team by listening and learning from others. Improve individual code quality and management skills.",
+      technologies:
+        "React, Next.js, JavaScript, Node.js, Confluence, Github Copilot, Code Review GPT",
     },
     {
       company: "[Part-time job]",
@@ -57,19 +59,11 @@ export const RESUME_DATA = {
       badges: ["Remote"],
       title: "Junior Web Developer → Full Stack Developer",
       start: "01/2021",
-      end: "Present",
+      end: "",
       description:
-        "Implement new features, lead teams from a few people to more than 10 people, solve customer problems, build web applications from 0 to 1. Projects related to education, e-commerce, user social networks, etc. Technology: React, Vue.js, Next.js, Remix, JavaScript, TypeScript, Node.js, MongoDB",
-    },
-    {
-      company: "CyberSoft Academy",
-      link: "https://cybersoft.edu.vn/",
-      badges: ["Part-time"],
-      title: "Teaching Assistant",
-      start: "11/2019",
-      end: "10/2022",
-      description:
-        "The teaching assistant supports the teacher by leading engaging classroom activities, grading assignments, and tutoring students to enhance their understanding. They also provide administrative assistance, managing records and preparing materials. Additionally, they aid in managing the classroom, handling discipline, and addressing various needs as they arise.",
+        "Implement new features, lead small team, solve customer problems, build web applications from 0 to 1. Projects related to education, e-commerce, user social networks, etc.",
+      technologies:
+        "React, Vue.js, Next.js, Vite, Remix, JavaScript, TypeScript, Node.js, Express.js, MongoDB",
     },
     {
       company: "FPT Software",
@@ -79,7 +73,20 @@ export const RESUME_DATA = {
       start: "04/2020",
       end: "12/2020",
       description:
-        "Front-end developer with expertise in Angular 9, HTML, CSS, and TypeScript, adept at client-side code deployment and server-side Java development using Express Java and Java Web.",
+        "Front-end developer with client-side code implementation and Server-side Java development.",
+      technologies:
+        "Angular 9, HTML, CSS, TypeScript, Java Spring, AJAX, MySQL",
+    },
+    {
+      company: "CyberSoft Academy",
+      link: "https://cybersoft.edu.vn/",
+      badges: ["Part-time"],
+      title: "Teaching Assistant",
+      start: "11/2019",
+      end: "10/2022",
+      description:
+        "Teaching assistants support teachers by leading engaging classroom activities, grading assignments, and tutoring students to improve their understanding. Assists with classroom management, discipline, and addressing various needs as they arise. In addition, I also participate in a team of programmers, collaborating on creating classroom management applications, online courses, specialized English learning games, and algorithmic thinking training",
+      technologies: "",
     },
   ],
   skills: [
