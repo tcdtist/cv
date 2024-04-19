@@ -85,11 +85,11 @@ export const RESUME_DATA = {
   skills: [
     "JavaScript",
     "TypeScript",
-    "React/Next.js/Vite/Remix",
+    "React/Next.js",
+    "Vite/Remix",
     "Node.js",
-    "MongoDB",
     "Express.js",
-    "Jest",
+    "MongoDB",
   ],
   projects: [
     // {
