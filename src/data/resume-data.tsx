@@ -52,8 +52,8 @@ export const RESUME_DATA = {
         "Implemented new features, lead a team, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, Next.js, JavaScript, Node.js",
     },
     {
-      company: "[Freelance]",
-      link: "https://clevertech.biz",
+      company: "[Part-time job]",
+      link: "",
       badges: ["Remote"],
       title: "Junior Web Developer → Full Stack Developer",
       start: "01/2021",
@@ -74,7 +74,7 @@ export const RESUME_DATA = {
     {
       company: "FPT Software",
       link: "https://fptsoftware.com/",
-      badges: ["On-site"],
+      badges: ["On-site", "Internship"],
       title: "Java Developer → Front-end Web Developer",
       start: "04/2020",
       end: "12/2020",
