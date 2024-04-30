@@ -22,17 +22,16 @@ export const metadata: Metadata = {
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 const SOCIALS = {
-  "GitHubIcon":GitHubIcon,
-  "LinkedInIcon":LinkedInIcon,
-  "XIcon":XIcon,
-}
+  GitHubIcon,
+  LinkedInIcon,
+  XIcon,
+};
 
 export default async function Page() {
+  const response = await fetch(`${API_ROOT}me/cv/resume.json`);
+  const data: Profile = await response.json();
+  console.log(data);
 
-   const response = await fetch(`${API_ROOT}me/cv/resume.json`)
-   const data = await response.json()
-   console.log(data);
-   
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
@@ -77,23 +76,24 @@ export default async function Page() {
                   </a>
                 </Button>
               ) : null}
-              {data.contact.social.map((social) => {
-                const SocialIcon = SOCIALS[social.icon]
-                
-                return <Button
-                key={social.name}
-                className="size-8"
-                variant="outline"
-                size="icon"
-                asChild
-              >
-                <a href={social.url}>
-                  <SocialIcon icon={social.icon} className="size-4" />
-                </a>
-              </Button>
-              }
-                
-              )}
+              {data.contact.social.map((social: SocialLink) => {
+                // @ts-ignore
+                const SocialIcon = SOCIALS[social.icon];
+
+                return (
+                  <Button
+                    key={social.name}
+                    className="size-8"
+                    variant="outline"
+                    size="icon"
+                    asChild
+                  >
+                    <a href={social.url}>
+                      <SocialIcon icon={social.icon} className="size-4" />
+                    </a>
+                  </Button>
+                );
+              })}
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
               {data.contact.email ? (
