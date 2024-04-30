@@ -5,19 +5,33 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import { API_ROOT } from "@/constants";
-import { RESUME_DATA } from "@/data/resume-data";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary,
-  keywords: ["cv", "resume", "tcdtist", "fullstack"],
-  openGraph: {
-    images: RESUME_DATA.avatarUrl,
-    description: RESUME_DATA.summary,
-  },
-};
+// export const metadata: Metadata = {
+//   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
+//   description: RESUME_DATA.summary,
+//   keywords: ["cv", "resume", "tcdtist", "fullstack"],
+//   openGraph: {
+//     images: RESUME_DATA.avatarUrl,
+//     description: RESUME_DATA.summary,
+//   },
+// };
+
+export async function generateMetadata() {
+  const response = await fetch(`${API_ROOT}me/cv/resume.json`);
+  const data: Profile = await response.json();
+  console.log(data);
+
+  return {
+    title: `${data.name} | ${data.about}`,
+    description: data.summary,
+    keywords: ["cv", "resume", "tcdtist", "fullstack"],
+    openGraph: {
+      images: data.avatarUrl,
+      description: data.summary,
+    },
+  };
+}
 
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
@@ -30,7 +44,6 @@ const SOCIALS = {
 export default async function Page() {
   const response = await fetch(`${API_ROOT}me/cv/resume.json`);
   const data: Profile = await response.json();
-  console.log(data);
 
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
