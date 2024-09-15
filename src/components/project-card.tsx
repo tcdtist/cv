@@ -7,32 +7,30 @@ import {
 } from "./ui/card";
 import { Badge } from "./ui/badge";
 
-interface Props {
-  title: string;
-  description: string;
-  tags: readonly string[];
-  link?: string;
-}
-
-export function ProjectCard({ title, description, tags, link }: Props) {
+export function ProjectCard({
+  title,
+  subtitle,
+  description,
+  tags,
+  link,
+}: Project) {
   return (
     <Card className="flex flex-col overflow-hidden border border-muted p-3">
       <CardHeader className="">
         <div className="space-y-1">
           <CardTitle className="text-base">
             {link ? (
-              <a
-                href={link}
-                target="_blank"
-                className="inline-flex items-center gap-1 hover:underline"
-              >
-                {title}{" "}
-                <span className="size-1 rounded-full bg-green-500"></span>
-              </a>
+              <div className="flex items-center justify-between gap-2">
+                <a href={link} target="_blank" className="hover:underline">
+                  {title}{" "}
+                </a>
+                <span className="size-1.5 shrink-0 rounded-full bg-green-500"></span>
+              </div>
             ) : (
               title
             )}
           </CardTitle>
+          {subtitle && <div className="font-mono text-xs">{subtitle}</div>}
           <div className="hidden font-mono text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>

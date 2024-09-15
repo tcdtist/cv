@@ -3,6 +3,7 @@ interface Profile {
   avatarUrl: string;
   contact: ContactInfo;
   education: EducationDetail[];
+  certifications: CertificateDetail[];
   initials: string;
   location: string;
   locationLink: string;
@@ -33,14 +34,26 @@ interface EducationDetail {
   start: string;
 }
 
+interface CertificateDetail {
+  name: string;
+  organization?: string;
+  start: string;
+  end?: string;
+}
+
 interface Project {
-  // Define the structure of project items if available
+  title: string;
+  subtitle: string;
+  description: string;
+  tags: readonly string[];
+  link?: string;
 }
 
 interface WorkExperience {
   badges: string[];
   company: string;
-  description: string;
+  description: string[];
+  achievements: string[];
   end: string;
   link: string;
   start: string;
