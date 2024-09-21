@@ -5,17 +5,19 @@ import { CardContent } from "@/components/ui/card";
 const Projects = ({ data }: { data: Profile }) => {
   return (
     <Section className="scroll-mb-16">
-      <h2 className="text-xl font-bold">My Projects</h2>
+      <h2 className="text-xl font-bold">Projects</h2>
       <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-1 print:gap-2">
         {data.projects.map((project) => {
           return (
             <ProjectCard
-              key={project.title}
-              title={project.title}
-              subtitle={project.subtitle}
+              key={project.name}
+              name={project.name}
+              role={project.role}
+              responsibilities={project.responsibilities}
+              technicalContributions={project.technicalContributions}
               description={project.description}
-              tags={project.tags}
-              link={"link" in project ? project.link : undefined}
+              technologies={project.technologies}
+              // link={"link" in project ? project.link : undefined}
             />
           );
         })}

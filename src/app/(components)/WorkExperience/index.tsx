@@ -42,13 +42,6 @@ const WorkExperience = ({ data }: { data: Profile }) => {
                 ))}
               </CardContent>
             )}
-            {work.achievements.length > 0 && (
-              <CardContent className="mt-2 space-y-px text-xs">
-                {work.achievements.map((achievements, index) => (
-                  <div key={index}>{achievements}</div>
-                ))}
-              </CardContent>
-            )}
             {work.technologies ? (
               <CardContent className="mt-2 text-xs">
                 <span>Technologies:</span> {work.technologies}

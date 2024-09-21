@@ -42,11 +42,12 @@ interface CertificateDetail {
 }
 
 interface Project {
-  title: string;
-  subtitle: string;
+  name: string;
+  role: string;
   description: string;
-  tags: readonly string[];
-  link?: string;
+  responsibilities: string[];
+  technicalContributions: string[];
+  technologies: readonly string[];
 }
 
 interface WorkExperience {
