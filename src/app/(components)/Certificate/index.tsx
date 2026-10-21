@@ -14,7 +14,9 @@ const Certificate = ({ data }: { data: Profile }) => {
                   {certification.name}
                 </h3>
                 <div className="text-sm tabular-nums text-gray-500">
-                  {certification.start} - {certification.end}
+                  {certification.end
+                    ? `${certification.start} - ${certification.end}`
+                    : certification.start}
                 </div>
               </div>
             </CardHeader>
