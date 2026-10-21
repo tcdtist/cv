@@ -1,12 +1,13 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon, XIcon, LeetCodeIcon } from "@/components/icons";
 
 const SOCIALS = {
   GitHubIcon,
   LinkedInIcon,
   XIcon,
+  LeetCodeIcon,
 };
 
 const Header = ({ data }: { data: Profile }) => {
